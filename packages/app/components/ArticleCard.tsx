@@ -19,7 +19,7 @@ export default function ArticleCard({
     // const product = products[0];
 
     const handleRedirect = () => {
-        navigation.navigate('article-detail', {
+        navigation.navigate('Article', {
             id,
             image,
             title,
@@ -69,7 +69,7 @@ export default function ArticleCard({
                     {description}
                 </Text>
                 <TouchableOpacity
-                    className="flex-row justify-center rounded-full bg-black/90 dark:bg-white/90 p-3 w-10/12 self-center mt-5"
+                    className="flex-row justify-center rounded-full bg-gray-700 dark:bg-white/90 p-3 w-10/12 self-center mt-5"
                     onPress={handleRedirect}
                 >
                     <Text className="text-white dark:text-black font-bold">Read more</Text>

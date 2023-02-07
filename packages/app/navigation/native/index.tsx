@@ -1,11 +1,11 @@
-import { Image, StatusBar } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { ChevronLeftIcon, UserCircleIcon } from 'react-native-heroicons/outline';
+import { BellIcon, HomeIcon } from 'react-native-heroicons/outline';
+import { View } from 'app/design/view'
 
 import { ArticleDetailsScreen } from 'app/features/details/details-screen'
 import { HomeScreen } from '../../features/home/screen'
-import { UserDetailScreen } from '../../features/user/detail-screen'
-import { View } from 'app/design/view'
+import { NotifyDetailScreen } from '../../features/notification/details-screen'
 
 const Stack = createNativeStackNavigator<{
   home: undefined
@@ -15,39 +15,46 @@ const Stack = createNativeStackNavigator<{
   'article-detail': {
     id: string
   }
-}>()
+}>();
 
-//Unused function
-// function HeaderLeft({ navigation }) {
-//   return (
-//     <View style={{ backgroundColor: 'red' }}>
-//       <Icon name="angle-left" size={30} color="#1841c7" />
-//     </View>
-//   );
-// }
-
-function HeaderTitle({ navigation }) {
+// header left
+function HeaderLeft({ navigation }) {
   return (
-    <View className="flex flex-row">
-      {/* <View className='basis-1/2'>
-        <ChevronLeftIcon size={30} color="#1841c7" />
-      </View> */}
-      <View>
-        <Image source={{ uri: 'https://niyaz.vercel.app/logo.png' }} className="w-10 h-10" />
-      </View>
-      {/* <View className='basis-[48]'>
-        <UserCircleIcon size={30} color="#1841c7" />
-      </View> */}
+    <View style={{ marginHorizontal: 10 }}>
+      <HomeIcon size={30} color="#00CCBB" />
     </View>
   );
 }
 
-//Unused function
+// function HeaderTitle({ navigation }) {
+//   return (
+//     <View style={{ flexDirection: 'row', marginRight: 15 }}>
+//       <View style={{ justifyContent: 'center' }}>
+//         <Bars3Icon size={30} color="#1841c7" />
+//       </View>
+//       <View style={{ flex: 1 }}>
+//         <Image
+//           source={{ uri: 'https://niyaz.vercel.app/logo.png' }}
+//           style={{ widith: 36, height: 36, resizeMode: 'contain' }}
+//         />
+//       </View>
+//       <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
+//         <View style={{ justifyContent: 'center', padding: 5 }}>
+//           <BellIcon size={30} color="#1841c7" />
+//         </View>
+//       </TouchableOpacity>
+//     </View>
+//   );
+// }
+
+// header right
 function HeaderRight({ navigation }) {
   return (
-    <View style={{ marginHorizontal: 10 }}>
-      <UserCircleIcon size={30} color="#1841c7" />
-    </View>
+    <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
+      <View style={{ marginHorizontal: 10 }}>
+        <BellIcon size={30} color="#00CCBB" />
+      </View>
+    </TouchableOpacity>
   );
 }
 
@@ -55,25 +62,31 @@ export function NativeNavigation() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="home"
+        name="Home"
         component={HomeScreen}
         options={({ navigation }) => {
           return {
-            // headerLeft: () => <HeaderTitle navigation={navigation} />,
-            headerTitle: () => <HeaderTitle navigation={navigation} />,
-            // headerRight: () => <HeaderRight navigation={navigation} />,
+            // headerShown: false,
+            title: '',
+            headerLeft: () => <HeaderLeft navigation={navigation} />,
+            // headerTitle: () => <HeaderTitle navigation={navigation} />,
+            headerRight: () => <HeaderRight navigation={navigation} />,
           };
         }}
       />
       <Stack.Screen
-        name="article-detail"
+        name="Article"
         component={ArticleDetailsScreen}
-        options={{ title: 'Article' }}
+        options={{
+          title: 'Article',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
       />
       <Stack.Screen
-        name="user-detail"
-        component={UserDetailScreen}
-        options={{ title: 'User' }}
+        name="Notifications"
+        component={NotifyDetailScreen}
       />
     </Stack.Navigator>
   )

@@ -49,10 +49,10 @@ export function ArticleDetailsScreen() {
                 placeholderColor='#b3e5fc'
             /> */}
           <TouchableOpacity
-            className='absolute top-14 left-5 p-2 bg-gray-100 rounded-full'
+            className='absolute top-14 left-5 p-2 bg-gray-700 rounded-full'
             onPress={handleGoBack}
           >
-            <ArrowLeftIcon size={20} color='#00CCBB' />
+            <ArrowLeftIcon size={20} color='#ffffff' />
           </TouchableOpacity>
         </View>
 

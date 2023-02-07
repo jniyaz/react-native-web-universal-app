@@ -15,7 +15,7 @@ const ArticleCard = ({
     const navigation = useNavigation();
 
     const handleRedirect = () => {
-        navigation.navigate('article-detail', {
+        navigation.navigate('Article', {
             id,
             image,
             title,
