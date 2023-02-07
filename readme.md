@@ -1,6 +1,6 @@
-# React (Native | Web) | Using Expo, React, Next.js, React Native, Tailwind, Solito 🕴
+# React (Native/Web) App | MonoRepo
 
-- This app is built using Expo, Next.js, React Native, Tailwind(NativeWind), Solito..
+- This app is built using React, React Native, Next.js, Expo, Tailwind (NativeWind), Solito..
 - This app uses jsonplaceholder, wordpress apis for dummy data.
 - To run locally, please follow the below steps.
 
