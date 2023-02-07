@@ -3,9 +3,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { BellIcon, HomeIcon } from 'react-native-heroicons/outline';
 import { View } from 'app/design/view'
 
+import { HomeScreen } from 'app/pages/HomeScreen'
+import { NotificationScreen } from 'app/pages/NotificationScreen';
 import { ArticleDetailsScreen } from 'app/features/details/details-screen'
-import { HomeScreen } from '../../features/home/screen'
-import { NotifyDetailScreen } from '../../features/notification/details-screen'
 
 const Stack = createNativeStackNavigator<{
   home: undefined
@@ -86,7 +86,7 @@ export function NativeNavigation() {
       />
       <Stack.Screen
         name="Notifications"
-        component={NotifyDetailScreen}
+        component={NotificationScreen}
       />
     </Stack.Navigator>
   )

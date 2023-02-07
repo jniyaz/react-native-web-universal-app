@@ -22,10 +22,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Solito Example App</title>
+        <title>React (Native|Web) App 👈 Niyaz</title>
         <meta
           name="description"
-          content="Expo + Next.js with Solito. By Fernando Rojo."
+          content="Expo + Next.js using React, Next, Tailwind, Solito"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
