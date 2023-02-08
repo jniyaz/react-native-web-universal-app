@@ -1,23 +1,20 @@
 import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
-import React, { useEffect, useLayoutEffect } from 'react';
 import { useRoute, useNavigation } from '@react-navigation/native';
 import {
   ArrowLeftIcon,
-  ChevronRightIcon,
+  // ChevronRightIcon,
   CalendarDaysIcon,
   EyeIcon
 } from 'react-native-heroicons/solid';
-import { QuestionMarkCircleIcon } from 'react-native-heroicons/outline';
-import { MapPinIcon } from 'react-native-heroicons/outline';
-
-import { MotiLink } from 'solito/moti'
-import { createParam } from 'solito'
-// import Appbar from 'app/components/Appbar';
 import { AsyncImage } from 'app/components/AsyncImage';
+// import { QuestionMarkCircleIcon } from 'react-native-heroicons/outline';
+// import { MapPinIcon } from 'react-native-heroicons/outline';
+// import { MotiLink } from 'solito/moti'
+// import Appbar from 'app/components/Appbar';
+// import { createParam } from 'solito'
+// const { useParam } = createParam<{ id: string }>()
 
-const { useParam } = createParam<{ id: string }>()
-
-export function ArticleDetailsScreen() {
+export function ArticleDetailsNative() {
   const navigation = useNavigation();
   const {
     params: {
@@ -39,15 +36,15 @@ export function ArticleDetailsScreen() {
       {/* <Appbar /> */}
       <ScrollView className='bg-white'>
         <View className='relative'>
-          <Image
+          {/* <Image
             source={{ uri: image }}
             className='h-56 w-full bg-gray-300 p-4'
+          /> */}
+          <AsyncImage
+            source={{ uri: image }}
+            className='h-56 w-full bg-gray-300 p-4'
+            placeholderColor='#b3e5fc'
           />
-          {/* <AsyncImage
-                source={{ uri: image }}
-                className='h-56 w-full bg-gray-300 p-4'
-                placeholderColor='#b3e5fc'
-            /> */}
           <TouchableOpacity
             className='absolute top-14 left-5 p-2 bg-gray-700 rounded-full'
             onPress={handleGoBack}

@@ -1,13 +1,19 @@
 import ArticleCardWeb from './ArticleCardWeb'
+import { ActivityIndicator } from 'react-native'
+import { usePosts } from 'app/hooks/Blog/usePosts'
 
 const ArticleFeaturedWeb = () => {
+    const { posts, isLoading, isError } = usePosts()
+
+    if (isLoading) return <ActivityIndicator />
+    if (isError) return <p className='text-red-500'>Something went wrong.</p>
+    
+    const filteredPosts = posts?.filter((p, i) => i < 4)
+
     return (
-        <>
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900">Featured Articles</h2>
-            <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                {[1, 2, 3, 4].map((item, i) => <ArticleCardWeb key={i} />)}
-            </div>
-        </>
+        <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            {posts && filteredPosts.map((item, i) => <ArticleCardWeb key={i} post={item} />)}
+        </div>
     )
 }
 

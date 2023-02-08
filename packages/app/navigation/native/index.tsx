@@ -5,7 +5,7 @@ import { View } from 'app/design/view'
 
 import { HomeScreen } from 'app/pages/HomeScreen'
 import { NotificationScreen } from 'app/pages/NotificationScreen';
-import { ArticleDetailsScreen } from 'app/features/details/details-screen'
+import { ArticleScreen } from 'app/pages/ArticleScreen';
 
 const Stack = createNativeStackNavigator<{
   home: undefined
@@ -76,7 +76,7 @@ export function NativeNavigation() {
       />
       <Stack.Screen
         name="Article"
-        component={ArticleDetailsScreen}
+        component={ArticleScreen}
         options={{
           title: 'Article',
           headerTitleStyle: {

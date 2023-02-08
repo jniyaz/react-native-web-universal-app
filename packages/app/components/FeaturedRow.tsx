@@ -1,22 +1,10 @@
 import { View, Text, ScrollView, ActivityIndicator } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { usePosts } from 'app/hooks/Blog/usePosts'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import FeaturedCard from './FeaturedCard'
 
 const FeaturedRow = () => {
-  const [posts, setPosts] = useState<any>([])
-  const [loading, setLoading] = useState<any>(false)
-
-  useEffect(() => {
-    setLoading(true)
-    fetch('https://mockend.com/mockend/demo/posts')
-      .then((response) => response.json())
-      .then((json) => {
-        setPosts(json)
-        setLoading(false)
-      })
-  }, [])
-
+  const { posts, isLoading, isError } = usePosts()
   const filteredPosts = posts?.filter((p, i) => i <= 6)
 
   return (
@@ -34,7 +22,7 @@ const FeaturedRow = () => {
         showsHorizontalScrollIndicator={false}
         className="pt-4"
       >
-        {loading && <ActivityIndicator />}
+        {isLoading && <ActivityIndicator />}
         {filteredPosts?.map((post) => (
           <FeaturedCard
             key={post.id}
