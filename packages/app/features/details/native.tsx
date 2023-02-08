@@ -6,7 +6,7 @@ import {
   CalendarDaysIcon,
   EyeIcon
 } from 'react-native-heroicons/solid';
-import { AsyncImage } from 'app/components/AsyncImage';
+// import { AsyncImage } from 'app/components/AsyncImage';
 // import { QuestionMarkCircleIcon } from 'react-native-heroicons/outline';
 // import { MapPinIcon } from 'react-native-heroicons/outline';
 // import { MotiLink } from 'solito/moti'
@@ -36,15 +36,15 @@ export function ArticleDetailsNative() {
       {/* <Appbar /> */}
       <ScrollView className='bg-white'>
         <View className='relative'>
-          {/* <Image
+          <Image
             source={{ uri: image }}
             className='h-56 w-full bg-gray-300 p-4'
-          /> */}
-          <AsyncImage
+          />
+          {/* <AsyncImage
             source={{ uri: image }}
             className='h-56 w-full bg-gray-300 p-4'
             placeholderColor='#b3e5fc'
-          />
+          /> */}
           <TouchableOpacity
             className='absolute top-14 left-5 p-2 bg-gray-700 rounded-full'
             onPress={handleGoBack}
