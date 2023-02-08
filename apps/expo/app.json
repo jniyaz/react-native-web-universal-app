@@ -1,12 +1,24 @@
 {
   "expo": {
-    "name": "solito-nativewind",
-    "slug": "solito-nativewind",
+    "name": "my-app",
+    "slug": "my-app-niyaz",
     "version": "1.0.0",
-    "scheme": "solito-nativewind",
-    "platforms": ["ios", "android", "web"],
+    "scheme": "my-app",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "ios": {
-      "bundleIdentifier": "com.solito.nativewind"
+      "bundleIdentifier": "com.my.app"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e86e2ed0-f890-41b2-b9ee-273ea2de8a0a"
+      }
+    },
+    "android": {
+      "package": "com.my.app"
     }
   }
 }

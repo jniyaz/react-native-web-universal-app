@@ -13,9 +13,11 @@ const ArticleFeed = () => {
                 <Text className="text-lg font-bold">{'Articles'}</Text>
             </View>
             <Text className="px-4 text-xs text-gray-500">{'Latest Blog Articles'}</Text>
-            <SafeAreaView style={{ flex: 1 }}>
+            <SafeAreaView className='mx-4'>
                 {isLoading && <ActivityIndicator />}
-                {posts &&
+                {posts && posts.map((item, i) => <ArticleCard key={i} {...item} />)}
+                {/* flatlist bring VirtualizedLists scroll view warnings */}
+                {/* {posts &&
                     <FlatList
                         data={posts}
                         keyExtractor={(item) => item.id}
@@ -23,7 +25,7 @@ const ArticleFeed = () => {
                         contentContainerStyle={{ paddingHorizontal: 15 }}
                         horizontal={false}
                     />
-                }
+                } */}
             </SafeAreaView>
         </>
     )

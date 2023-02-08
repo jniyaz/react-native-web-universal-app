@@ -7,7 +7,7 @@ import ArticleFeed from 'app/components/ArticleFeed';
 export function HomeNative() {
     return (
         <>
-            <ScrollView horizontal={false} className='bg-gray-100 ' style={{ width: '100%', height: '100%' }}>
+            <ScrollView className='bg-gray-100 '>
                 {/* <Categories /> */}
                 <View className='pb-24'>
                     <FeaturedRow />

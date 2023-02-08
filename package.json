@@ -1,5 +1,5 @@
 {
-  "name": "solito-with-tailwind",
+  "name": "mono-repo",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -16,7 +16,10 @@
   },
   "scripts": {
     "native": "cd apps/expo && expo start",
-    "web": "cd apps/next && yarn next"
+    "web": "cd apps/next && yarn next",
+    "build": "yarn turbo run build",
+    "build:expo": "yarn turbo run build --scope=@myapp/expo",
+    "build:next": "yarn turbo run build --scope=@myapp/next"
   },
   "engines": {
     "node": ">=16.0.0 <17.0.0"

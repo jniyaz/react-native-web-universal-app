@@ -30,7 +30,7 @@ export default function ArticleCard({
     };
 
     return (
-        <View className={"w-full bg-white dark:bg-gray-50/10 rounded-3xl p-5 my-5"}>
+        <View className={"w-full bg-white dark:bg-gray-50/10 rounded-3xl p-5 my-2"}>
             <View className="bg-white rounded-xl">
                 {/* <Image source={{ uri: image }} className='h-40 w-full' /> */}
                 <AsyncImage
