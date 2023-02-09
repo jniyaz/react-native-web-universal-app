@@ -1,24 +1,26 @@
 {
   "expo": {
-    "name": "my-app",
+    "name": "Blog App",
     "slug": "my-app-niyaz",
+    "icon": "logo.png",
     "version": "1.0.0",
-    "scheme": "my-app",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "orientation": "portrait",
+    "scheme": "my-app-niyaz",
+    "splash": {
+      "image": "logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
-      "bundleIdentifier": "com.my.app"
+      "bundleIdentifier": "com.my-app-niyaz.app"
+    },
+    "android": {
+      "package": "com.jniyaz.myappniyaz"
     },
     "extra": {
       "eas": {
         "projectId": "e86e2ed0-f890-41b2-b9ee-273ea2de8a0a"
       }
-    },
-    "android": {
-      "package": "com.my.app"
     }
   }
 }

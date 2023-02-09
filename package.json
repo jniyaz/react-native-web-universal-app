@@ -17,9 +17,7 @@
   "scripts": {
     "native": "cd apps/expo && expo start",
     "web": "cd apps/next && yarn next",
-    "build": "yarn turbo run build",
-    "build:expo": "yarn turbo run build --scope=@myapp/expo",
-    "build:next": "yarn turbo run build --scope=@myapp/next"
+    "build:android:preview": "eas build --profile preview --platform android && say done"
   },
   "engines": {
     "node": ">=16.0.0 <17.0.0"
