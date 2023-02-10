@@ -2,20 +2,24 @@
   "expo": {
     "name": "Blog App",
     "slug": "my-app-niyaz",
-    "icon": "logo.png",
+    "description": "The universal blog app",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "scheme": "my-app-niyaz",
+    "owner": "jniyaz",
+    "scheme": "io.blogapp.development",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "logo.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "bundleIdentifier": "com.my-app-niyaz.app"
+      "bundleIdentifier": "com.blogapp.app",
+      "jsEngine": "hermes"
     },
     "android": {
-      "package": "com.jniyaz.myappniyaz"
+      "package": "com.blogapp.app",
+      "jsEngine": "hermes"
     },
     "extra": {
       "eas": {
