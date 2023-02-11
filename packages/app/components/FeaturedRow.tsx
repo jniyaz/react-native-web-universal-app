@@ -27,11 +27,11 @@ const FeaturedRow = () => {
           <FeaturedCard
             key={post.id}
             id={post.id}
-            title={post.title}
-            image={post.cover}
-            views={post.views}
-            created_at={post.createdAt}
-            short_description={post.body}
+            title={post.title.rendered}
+            image={post.jetpack_featured_media_url}
+            created_at={post.modified}
+            description={post.content.rendered}
+            link={post.link}
           />
         ))}
       </ScrollView>
