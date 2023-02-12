@@ -1,6 +1,6 @@
 import { TouchableOpacity, Image } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { Bars3Icon, BellIcon, HomeIcon, ListBulletIcon, UserCircleIcon, UserIcon } from 'react-native-heroicons/outline';
+import { BellIcon, UserIcon } from 'react-native-heroicons/outline';
 import { View } from 'app/design/view'
 
 import { HomeScreen } from 'app/pages/HomeScreen'
