@@ -8,11 +8,11 @@ const ArticleCard = ({
     id,
     title,
     image,
-    views,
     created_at,
     description,
-    link
-}) => {
+    link,
+    relatedArticles
+}: any) => {
     const navigation = useNavigation();
 
     const handleRedirect = () => {
@@ -22,7 +22,8 @@ const ArticleCard = ({
             "title": title,
             "description": description,
             "created_at": created_at,
-            "link": link
+            "link": link,
+            "relatedArticles": relatedArticles
         });
     };
 
@@ -33,7 +34,7 @@ const ArticleCard = ({
         >
             {/* <Image source={{ uri: image }} className='h-36 w-64 rounded-sm' /> */}
             <AsyncImage
-                source={{ uri: image !== '' ? image : 'https://via.placeholder.com/200.png?text=No+Image' }}
+                source={{ uri: image !== '' ? image : 'https://niyaz.vercel.app/default.png' }}
                 className='h-36 w-64 rounded-sm'
                 placeholderColor='#b3e5fc'
             />

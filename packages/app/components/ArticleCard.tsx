@@ -9,7 +9,8 @@ export default function ArticleCard({
     title,
     excerpt: description,
     date: created_at,
-    link
+    link,
+    relatedArticles
 }) {
     const navigation = useNavigation();
 
@@ -20,7 +21,8 @@ export default function ArticleCard({
             "title": title.rendered,
             "description": description.rendered,
             "created_at": created_at,
-            "link": link
+            "link": link,
+            "relatedArticles": relatedArticles
         });
     };
 
@@ -28,7 +30,7 @@ export default function ArticleCard({
         <View className={"w-full bg-white rounded-3xl p-5 my-2"}>
             <View className="bg-white rounded-xl">
                 <AsyncImage
-                    source={{ uri: image !== '' ? image : 'https://via.placeholder.com/200.png?text=No+Image' }}
+                    source={{ uri: image !== '' ? image : 'https://niyaz.vercel.app/default.png' }}
                     className='h-40 w-full'
                     placeholderColor='#b3e5fc'
                 />

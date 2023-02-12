@@ -1,19 +1,26 @@
 import { Text, TouchableOpacity, Image } from 'react-native';
-import { TextLink } from 'app/design/typography';
-import { Row } from 'app/design/layout'
+import { useNavigation } from '@react-navigation/native';
 
-const CategoryCard = ({ title }) => {
+const CategoryCard = ({ id, name, color }) => {
+    const navigation = useNavigation();
+
+    const handleRedirect = () => {
+        navigation.navigate('CategoryArticles', {
+            "id": id,
+            "name": name
+        });
+    };
+
     return (
-        <TouchableOpacity className='mr-2'>
-            <TextLink href="/user/fernando">
-                {/* <Image
-                    source={{ uri: 'https://tailwindcss.com/_next/static/media/sarah-dayan.a620c98f.jpg' }}
-                    className='h-20 w-20 rounded'
-                /> */}
-                <Text className='absolute bottom-1 left-1 text-blue-700 font-bold'>
-                    {title}
-                </Text>
-            </TextLink>
+        <TouchableOpacity
+            className='mt-1 mr-2'
+            onPress={() => handleRedirect()}
+        >
+            {/* <Image
+                source={{ uri: 'https://niyaz.vercel.app/default.png' }}
+                className='h-20 w-20 rounded'
+            /> */}
+            <Text className="bg-slate-300 px-5 py-4 rounded mb-2">{name}</Text>
         </TouchableOpacity>
     );
 };

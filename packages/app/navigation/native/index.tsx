@@ -1,11 +1,13 @@
 import { TouchableOpacity, Image } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { Bars3Icon, BellIcon, HomeIcon, ListBulletIcon } from 'react-native-heroicons/outline';
+import { Bars3Icon, BellIcon, HomeIcon, ListBulletIcon, UserCircleIcon, UserIcon } from 'react-native-heroicons/outline';
 import { View } from 'app/design/view'
 
 import { HomeScreen } from 'app/pages/HomeScreen'
 import { NotificationScreen } from 'app/pages/NotificationScreen';
 import { ArticleScreen } from 'app/pages/ArticleScreen';
+import { CategoryArticleScreen } from 'app/pages/CategoryArticleScreen';
+import { LoginScreen } from 'app/pages/LoginScreen';
 
 const Stack = createNativeStackNavigator<{
   home: undefined
@@ -32,21 +34,23 @@ const Stack = createNativeStackNavigator<{
 
 function HeaderTitle({ navigation }) {
   return (
-    <View style={{ flexDirection: 'row', marginRight: 15 }}>
-      <View style={{ justifyContent: 'center' }}>
-        <Bars3Icon size={30} color="#00CCBB" />
+    <View className='flex flex-row mr-7'>
+      <View className='flex-none'>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <UserIcon size={30} color="#00CCBB" />
+        </TouchableOpacity>
       </View>
-      <View style={{ flex: 1 }}>
+      <View className='flex-1'>
         <Image
           source={{ uri: 'https://niyaz.vercel.app/logo.png' }}
-          style={{ widith: 30, height: 30, resizeMode: 'contain' }}
+          style={{ widith: 30, height: 30, resizeMode: 'center' }}
         />
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
-        <View style={{ justifyContent: 'center', marginRight: 10 }}>
+      <View className='flex-none'>
+        <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
           <BellIcon size={30} color="#00CCBB" />
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -86,6 +90,20 @@ export function NativeNavigation() {
             fontWeight: 'bold',
           },
         }}
+      />
+      <Stack.Screen
+        name="CategoryArticles"
+        component={CategoryArticleScreen}
+        options={{
+          title: 'Articles',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+      <Stack.Screen
+        name="Login"
+        component={LoginScreen}
       />
       <Stack.Screen
         name="Notifications"
