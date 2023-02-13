@@ -7,7 +7,7 @@ const ArticleCardWeb = ({ post }) => {
         <div className="group relative">
             <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
                 <img
-                    src={post.jetpack_featured_media_url !== '' ? post.jetpack_featured_media_url : 'https://via.placeholder.com/200.png?text=No+Image'}
+                    src={post.jetpack_featured_media_url !== '' ? post.jetpack_featured_media_url : 'https://niyaz.vercel.app/default.png'}
                     alt={post.title.rendered}
                     className="object-cover  h-full w-full lg:h-full lg:w-full"
                 />

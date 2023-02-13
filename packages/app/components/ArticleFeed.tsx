@@ -5,7 +5,7 @@ import { Text } from 'react-native'
 import ArticleCard from "./ArticleCard";
 
 const ArticleFeed = ({ id, name }) => {
-    const { posts, isLoading, isError } = usePostsByCategory(id)
+    const { posts, isLoading, isError } = usePostsByCategory(id, 8)
 
     return (
         <>

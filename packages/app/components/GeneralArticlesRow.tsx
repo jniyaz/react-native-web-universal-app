@@ -4,7 +4,7 @@ import { usePostsByCategory } from 'app/hooks/Blog/usePostsByCategory'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 
 const GeneralArticlesRow = () => {
-    const { posts, isLoading, isError } = usePostsByCategory(54)
+    const { posts, isLoading, isError } = usePostsByCategory(54, 8)
 
     return (
         <View>

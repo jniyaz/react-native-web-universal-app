@@ -4,7 +4,7 @@ import FeaturedCard from './FeaturedCard'
 import { usePostsByCategory } from 'app/hooks/Blog/usePostsByCategory'
 
 const FeaturedRow = () => {
-  const { posts, isLoading, isError } = usePostsByCategory()
+  const { posts, isLoading, isError } = usePostsByCategory(457, 8)
   const filteredPosts = posts?.filter((p, i) => i <= 6)
 
   return (
