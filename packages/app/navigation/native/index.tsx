@@ -43,7 +43,7 @@ function HeaderTitle({ navigation }) {
       <View className='flex-1'>
         <Image
           source={{ uri: 'https://niyaz.vercel.app/logo.png' }}
-          style={{ widith: 30, height: 30, resizeMode: 'center' }}
+          style={{ widith: 30, height: 30, resizeMode: 'contain' }}
         />
       </View>
       <View className='flex-none'>

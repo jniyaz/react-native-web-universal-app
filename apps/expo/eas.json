@@ -3,8 +3,14 @@
         "preview": {
             "android": {
                 "buildType": "apk"
+            },
+            "ios": {
+                "enterpriseProvisioning": "universal"
             }
         },
         "production": {}
+    },
+    "cli": {
+        "promptToConfigurePushNotifications": false
     }
 }
