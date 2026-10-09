@@ -134,7 +134,7 @@ Screens in `packages/app/pages/` utilize platform extensions (`.web.tsx` vs `.na
 
 ## 🔌 API Integration
 
-Data fetching is powered by **SWR** fetching from the WordPress REST API (`public-api.wordpress.com/wp/v2/sites/niyazjamal.wordpress.com`):
+Data fetching is powered by **SWR** fetching from the WordPress REST API endpoint specified in your environment variables (`NEXT_PUBLIC_WP_BASE_URL` / `EXPO_PUBLIC_WP_BASE_URL`):
 - `usePosts()`: Fetch latest blog articles
 - `usePost(id)`: Fetch detailed article data by ID
 - `usePostsByCategory(categoryId)`: Fetch articles filtered by category ID
