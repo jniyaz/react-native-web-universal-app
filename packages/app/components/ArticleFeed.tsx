@@ -4,7 +4,7 @@ import { View } from 'app/design/view'
 import { Text } from 'react-native'
 import ArticleCard from "./ArticleCard";
 
-const ArticleFeed = ({ id, name }) => {
+const ArticleFeed = ({ id, name }: { id?: any; name?: string }) => {
     const { posts, isLoading, isError } = usePostsByCategory(id, 8)
 
     return (
@@ -15,7 +15,7 @@ const ArticleFeed = ({ id, name }) => {
             <Text className="px-4 text-xs text-gray-500">{'Latest Blog Articles'}</Text>
             <SafeAreaView className='mx-4'>
                 {isLoading && <ActivityIndicator />}
-                {posts && posts.map((item, i) => <ArticleCard key={i} {...item} relatedArticles={item['jetpack-related-posts']} />)}
+                {posts && posts.map((item: any, i: number) => <ArticleCard key={i} {...item} relatedArticles={item['jetpack-related-posts']} />)}
                 {/* flatlist bring VirtualizedLists scroll view warnings */}
                 {/* {posts &&
                     <FlatList

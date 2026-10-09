@@ -13,7 +13,7 @@ const ArticleCard = ({
     link,
     relatedArticles
 }: any) => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<any>();
 
     const handleRedirect = () => {
         navigation.navigate('Article', {

@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import * as Linking from 'expo-linking';
 
-const RelatedArticle = ({ item }) => {
+const RelatedArticle = ({ item }: { item: any }) => {
 
     const _handleOpenWithLinking = () => {
         Linking.openURL(item.url);

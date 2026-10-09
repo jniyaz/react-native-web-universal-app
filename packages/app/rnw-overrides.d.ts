@@ -11,6 +11,7 @@ declare module 'react-native' {
     transitionDuration?: string
   }
   interface TextProps {
+    className?: string
     accessibilityComponentType?: never
     accessibilityTraits?: never
     accessibilityLevel?: number
@@ -21,6 +22,7 @@ declare module 'react-native' {
     }
   }
   interface ViewProps {
+    className?: string
     accessibilityRole?: string
     href?: string
     hrefAttrs?: {
@@ -28,5 +30,14 @@ declare module 'react-native' {
       target?: '_blank'
     }
     onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void
+  }
+  interface ImageProps {
+    className?: string
+  }
+  interface ScrollViewProps {
+    className?: string
+  }
+  interface TouchableOpacityProps {
+    className?: string
   }
 }

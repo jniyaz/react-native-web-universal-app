@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
 import { View, Image } from 'react-native';
 
-export class AsyncImage extends Component {
+interface Props {
+  placeholderColor?: string;
+  style?: any;
+  source: any;
+  className?: string;
+}
+
+interface State {
+  loaded: boolean;
+}
+
+export class AsyncImage extends Component<Props, State> {
 
     constructor(props: Props) {
         super(props)

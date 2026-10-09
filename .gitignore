@@ -71,3 +71,9 @@ web-build/
 
 .turbo
 build/**
+
+.env
+.env.local
+.env.development
+.env.production
+.env.test

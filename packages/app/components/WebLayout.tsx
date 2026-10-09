@@ -1,6 +1,6 @@
 import Appbar from './Appbar'
 
-const WebLayout = ({ children }) => {
+const WebLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
             <Appbar />

@@ -1,21 +1,28 @@
 {
-  "version": "0.0.0",
   "name": "app",
+  "version": "0.0.0",
   "main": "index.ts",
-  "dependencies": {
-    "@react-navigation/native": "^6.0.8",
-    "@react-navigation/native-stack": "^6.5.0",
-    "dayjs": "^1.11.7",
-    "moti": "0.19.0-alpha.6",
-    "nativewind": "2.0.9",
-    "react-native-paper": "^5.2.0",
-    "react-native-reanimated": "2.9.1",
-    "solito": "^2.0.0",
-    "swr": "^2.0.3"
-  },
   "sideEffects": false,
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/native-stack": "^6.9.26",
+    "dayjs": "^1.11.13",
+    "moti": "^0.29.0",
+    "nativewind": "^4.1.23",
+    "react-native-paper": "^5.12.5",
+    "react-native-reanimated": "~3.16.1",
+    "solito": "^4.4.0",
+    "swr": "^2.2.5"
+  },
   "devDependencies": {
+    "@types/react": "^18.3.1",
     "react-native-heroicons": "^3.2.0",
-    "react-native-svg": "^12.1.0"
+    "react-native-svg": "15.8.0",
+    "typescript": "^5.7.0"
   }
 }

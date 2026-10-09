@@ -10,13 +10,22 @@ import { CategoryArticleScreen } from 'app/pages/CategoryArticleScreen';
 import { LoginScreen } from 'app/pages/LoginScreen';
 
 const Stack = createNativeStackNavigator<{
-  home: undefined
-  'user-detail': {
-    id: string
-  }
-  'article-detail': {
-    id: string
-  }
+  Home: undefined;
+  Article: {
+    id: string;
+    image?: string;
+    title?: string;
+    description?: string;
+    created_at?: string;
+    link?: string;
+    relatedArticles?: any;
+  };
+  CategoryArticles: {
+    id: string;
+    name: string;
+  };
+  Login: undefined;
+  Notifications: undefined;
 }>();
 
 // header left
@@ -43,7 +52,7 @@ function HeaderTitle({ navigation }) {
       <View className='flex-1'>
         <Image
           source={{ uri: 'https://niyaz.vercel.app/logo.png' }}
-          style={{ widith: 30, height: 30, resizeMode: 'contain' }}
+          style={{ width: 30, height: 30, resizeMode: 'contain' }}
         />
       </View>
       <View className='flex-none'>

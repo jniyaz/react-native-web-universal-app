@@ -4,7 +4,7 @@ import { Text } from 'app/design/typography'
 import { View } from 'app/design/view'
 
 export function NotificationNative() {
-    const navigation = useNavigation();
+    const navigation = useNavigation<any>();
     return (
         <View className="flex-1 items-center justify-center">
             <View className="mb-4">

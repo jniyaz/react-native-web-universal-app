@@ -9,7 +9,7 @@ const ArticleGeneralWeb = () => {
     if (isError) return <p>Something went wrong.</p>
     return (
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-            {posts && posts.map((item, i) => <ArticleCardWeb key={i} post={item} />)}
+            {posts && posts.map((item: any, i: number) => <ArticleCardWeb key={i} post={item} />)}
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import { View } from 'react-native'
-import { styled } from 'nativewind'
 
-export const Row = styled(View, "flex-row")
+export const Row = (props: any) => (
+  <View {...props} className={`flex-row ${props.className || ''}`} />
+)

@@ -11,7 +11,7 @@ const Appbar = () => {
                 <TextLink className='my-6 mx-2' href="/">
                     <img
                         src="https://niyaz.vercel.app/logo.png"
-                        style={{ widith: 30, height: 30, resizeMode: 'contain' }}
+                        style={{ width: 30, height: 30, objectFit: 'contain' }}
                         alt="logo"
                     />
                 </TextLink>

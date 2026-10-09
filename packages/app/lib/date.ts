@@ -2,7 +2,7 @@ import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 dayjs.extend(relativeTime)
 
-export const dateHumanize = (dateStr) => {
+export const dateHumanize = (dateStr?: string) => {
   if (!dateStr) return
   return dayjs(dateStr).fromNow()
 }

@@ -1,8 +1,8 @@
 import { Text, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const CategoryCard = ({ id, name, color }) => {
-    const navigation = useNavigation();
+const CategoryCard = ({ id, name, color }: { id: any; name: string; color?: string }) => {
+    const navigation = useNavigation<any>();
 
     const handleRedirect = () => {
         navigation.navigate('CategoryArticles', {

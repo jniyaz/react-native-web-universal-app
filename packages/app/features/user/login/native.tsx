@@ -4,7 +4,7 @@ import { Text } from 'app/design/typography'
 import { View } from 'app/design/view'
 
 const LoginNative = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   return (
     <View className="flex min-h-full items-center justify-center">
       <View className='mb-4'>

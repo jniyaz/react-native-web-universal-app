@@ -22,7 +22,7 @@ const GeneralArticlesRow = () => {
                 className="pt-4"
             >
                 {isLoading && <ActivityIndicator />}
-                {posts?.map((post) => (
+                {posts?.map((post: any) => (
                     <FeaturedCard
                         key={post.id}
                         id={post.id}

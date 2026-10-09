@@ -1,3 +1,13 @@
 {
-  "extends": "../../tsconfig"
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "jsx": "react-jsx",
+    "types": ["react", "react-native", "nativewind/types"]
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts"
+  ]
 }

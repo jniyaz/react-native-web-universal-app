@@ -1,7 +1,7 @@
 import { dateHumanize } from "app/lib/date"
 import { TextLink } from "solito/link"
 
-const ArticleCardWeb = ({ post }) => {
+const ArticleCardWeb = ({ post }: { post: any }) => {
 
     return (
         <div className="group relative">

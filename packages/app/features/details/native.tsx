@@ -11,7 +11,7 @@ import * as Linking from 'expo-linking';
 import RelatedArticle from 'app/components/RelatedArticle';
 
 export function ArticleDetailsNative() {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   const { params: { id, image, title, description, created_at, link, relatedArticles } }: any = useRoute();
 
   const handleGoBack = () => { navigation.goBack() };
@@ -83,7 +83,7 @@ export function ArticleDetailsNative() {
 
             <View className='pb-32'>
               <Text className='px-1 pt-3 mb-3 font-bold text-xl'>Related</Text>
-              {relatedArticles?.map((item, i) => (
+              {relatedArticles?.map((item: any, i: number) => (
                 <RelatedArticle key={i} item={item} />
               ))}
             </View>

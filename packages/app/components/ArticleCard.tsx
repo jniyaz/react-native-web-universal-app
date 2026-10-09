@@ -11,8 +11,8 @@ export default function ArticleCard({
     date: created_at,
     link,
     relatedArticles
-}) {
-    const navigation = useNavigation();
+}: any) {
+    const navigation = useNavigation<any>();
 
     const handleRedirect = () => {
         navigation.navigate('Article', {

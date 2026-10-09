@@ -5,7 +5,7 @@ import { usePostsByCategory } from 'app/hooks/Blog/usePostsByCategory'
 
 const FeaturedRow = () => {
   const { posts, isLoading, isError } = usePostsByCategory(457, 8)
-  const filteredPosts = posts?.filter((p, i) => i <= 6)
+  const filteredPosts = posts?.filter((p: any, i: number) => i <= 6)
 
   return (
     <View>
@@ -23,7 +23,7 @@ const FeaturedRow = () => {
         className="pt-4"
       >
         {isLoading && <ActivityIndicator />}
-        {filteredPosts?.map((post) => (
+        {filteredPosts?.map((post: any) => (
           <FeaturedCard
             key={post.id}
             id={post.id}
